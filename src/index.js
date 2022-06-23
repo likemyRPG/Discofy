@@ -3,7 +3,6 @@ require("./modules/checkValid");
 const { Collection, Client, Intents } = require("discord.js");
 const { Player } = require("discord-player");
 
-const { botToken } = require("../config.json");
 const Logger = require("./modules/Logger");
 const Embeds = require("./modules/Embeds");
 const Util = require("./modules/Util");
@@ -34,4 +33,4 @@ bot.player = new Player(bot, {
 
 require("./handler/EventHandler")(bot);
 
-bot.login(botToken);
+bot.login(process.env.SECRET);

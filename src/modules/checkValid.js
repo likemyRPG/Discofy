@@ -13,7 +13,8 @@ function checkValid() {
     throw Error("[ERROR]: Please upgrade npm to version 7 or more.");
   }
 
-  if (!config.botToken || config.botToken === "") {
+  console.log(process.env.SECRET);
+  if (!process.env.SECRET || process.env.SECRET === "") {
     throw Error("[ERROR]: Bot Token must be required.");
   }
 
