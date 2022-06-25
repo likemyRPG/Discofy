@@ -6,6 +6,7 @@ const { Player } = require("discord-player");
 const Logger = require("./modules/Logger");
 const Embeds = require("./modules/Embeds");
 const Util = require("./modules/Util");
+require("dotenv").config();
 
 const bot = new Client({
   intents: [

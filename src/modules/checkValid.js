@@ -1,5 +1,6 @@
 const config = require("../../config.json");
 const logger = require("../modules/Logger");
+require("dotenv").config();
 
 function checkValid() {
   const nodeV = parseFloat(process.versions.node);
@@ -13,7 +14,6 @@ function checkValid() {
     throw Error("[ERROR]: Please upgrade npm to version 7 or more.");
   }
 
-  console.log(process.env.SECRET);
   if (!process.env.SECRET || process.env.SECRET === "") {
     throw Error("[ERROR]: Bot Token must be required.");
   }
